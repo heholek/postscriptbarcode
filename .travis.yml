@@ -1,6 +1,6 @@
 language: R
 install: ""
-script: make -j `nproc` && make test && make release
+script: make -j `nproc` && make test && (cd wikidocs && make -f __pandoc/Makefile) && make release
 sudo: false
 addons:
   apt:
